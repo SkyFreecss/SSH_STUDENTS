@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+          "http://struts.apache.org//struts-2.5.dtd">
+          
+          
+<struts>
+        <package name="ssh" namespace="/" extends="struts-default"  strict-method-invocation="false">
+        <action name="students_*" class="studentsAction" method="{1}">
+        <result name="input">/index.jsp</result>
+        <result name="success" type="redirect">/frame.jsp</result>
+        <result name="findAll">/frame/listStudents.jsp</result>
+        <result name="saveUI">/frame/addStudents.jsp</result>
+        <result name="saveSuccess" type="redirectAction">students_findAll.action</result>
+        <result name="editSuccess">/frame/editStudents.jsp</result>
+        <result name="updateSuccess" type="redirectAction">students_findAll.action</result>
+        <result name="deleteSuccess" type="redirectAction">students_findAll.action</result>
+        </action>
+        
+        <action name="classroom_*" class="classroomAction" method="{1}">
+        <result name="findAll">/frame/list.jsp</result>
+        <result name="saveUI">/frame/addClassRoom.jsp</result>
+        <!-- 执行保存后重定向查询页面 -->
+        <result name="saveSuccess" type="redirectAction">classroom_findAll.action</result>
+        <!-- 执行更新后重定向查询页面 -->
+        <result name="updateSuccess" type="redirectAction">classroom_findAll.action</result>
+        <!-- 执行删除后重定向查询页面 -->
+        <result name="deleteSuccess" type="redirectAction">classroom_findAll.action</result>
+        <result name="editSuccess">/frame/edit.jsp</result>
+        </action>
+        
+        </package>
+</struts>
