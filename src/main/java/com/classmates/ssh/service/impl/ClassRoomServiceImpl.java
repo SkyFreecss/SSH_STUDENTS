@@ -28,6 +28,7 @@ public class ClassRoomServiceImpl implements ClassRoomService {
 	 * 分页查询的方法
 	 */
 	public PageBean<ClassRoom> findByPage(Integer currPage) {
+		@SuppressWarnings({ "rawtypes", "unchecked" })
 		PageBean<ClassRoom> pageBean = new PageBean();
 		
 		//封装当前页数。
@@ -50,6 +51,7 @@ public class ClassRoomServiceImpl implements ClassRoomService {
 		int begin = (currPage - 1)*pageSize;
 		List<ClassRoom> list = classroomDao.findByPage(begin,pageSize);
 		pageBean.setList(list);
+		
 		
 		return pageBean;
 	}

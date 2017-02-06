@@ -15,6 +15,10 @@ import com.opensymphony.xwork2.ModelDriven;
 
 public class ClassRoomAction extends ActionSupport implements ModelDriven<ClassRoom>{
     
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2731653509531504647L;
 	//模型驱动使用的对象
 	private ClassRoom classroom = new ClassRoom();
 
@@ -36,7 +40,9 @@ public class ClassRoomAction extends ActionSupport implements ModelDriven<ClassR
 	private Integer currPage=1;
 	
 	public void setCurrPage(Integer currPage) {
-		this.currPage = currPage;
+		@SuppressWarnings({ "unused", "rawtypes", "unchecked" })
+		PageBean<ClassRoom> pageBean = new PageBean();
+			this.currPage = currPage;
 	}
 	
 

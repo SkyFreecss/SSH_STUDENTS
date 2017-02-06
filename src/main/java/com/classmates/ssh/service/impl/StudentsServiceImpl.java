@@ -38,6 +38,7 @@ public class StudentsServiceImpl implements StudentsService{
 	/**
 	 * 业务层分页查询方法
 	 */
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public PageBean<Students> findAll(Integer currPage) {
 		
 		PageBean<Students> pageBean = new PageBean();

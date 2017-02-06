@@ -11,6 +11,7 @@ import com.classmates.ssh.domain.Students;
  *
  */
 
+@SuppressWarnings("unused")
 public interface ClassRoomService {
 
 

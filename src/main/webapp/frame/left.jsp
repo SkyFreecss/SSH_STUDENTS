@@ -16,8 +16,9 @@
     d.add('01','-1','学生管理系统');
     d.add('0101','01','1402班');
     d.add('010101','0101','专业管理','${pageContext.request.contextPath}/classroom_findAll.action','','right');
-
     d.add('010102','0101','学生管理','${pageContext.request.contextPath}/students_findAll.action','','right');
+    d.add('010103','0101','老师管理','${pageContext.request.contextPath}/students_findAll.action','','right');
+    d.add('010104','0101','财务管理','${pageContext.request.contextPath}/students_findAll.action','','right');
     document.write(d);
   </script>
 </div>

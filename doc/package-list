@@ -1,0 +1,6 @@
+com.classmates.ssh.action
+com.classmates.ssh.dao
+com.classmates.ssh.dao.impl
+com.classmates.ssh.domain
+com.classmates.ssh.service
+com.classmates.ssh.service.impl

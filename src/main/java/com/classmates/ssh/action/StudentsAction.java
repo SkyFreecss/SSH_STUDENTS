@@ -7,7 +7,6 @@ import com.classmates.ssh.domain.PageBean;
 import com.classmates.ssh.domain.Students;
 import com.classmates.ssh.service.ClassRoomService;
 import com.classmates.ssh.service.StudentsService;
-import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
@@ -19,7 +18,12 @@ import com.opensymphony.xwork2.ModelDriven;
  */
 public class StudentsAction extends ActionSupport implements ModelDriven<Students>{
 	        
-	        //模型驱动使用的对象
+	        /**
+	 * 
+	 */
+	private static final long serialVersionUID = 5794528490771795112L;
+	
+			//模型驱动使用的对象
 	        private Students student = new Students();
 			@Override
 			public Students getModel() {
@@ -136,7 +140,6 @@ public class StudentsAction extends ActionSupport implements ModelDriven<Student
            {
         	   student = studentsService.findById(student.getSid());
                studentsService.delete(student);
-               
                return "deleteSuccess";
            }
 }

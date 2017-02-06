@@ -19,6 +19,7 @@ public class StudentsDaoImpl extends HibernateDaoSupport implements StudentsDao{
 	/**
 	 * Dao中根据用户名和密码查询用户的方法。
 	 */
+	@SuppressWarnings("unchecked")
 	public Students findByUsernameAndPassword(Students student) {
 		
 		String hql = "from Students where username = ? and password = ?";
@@ -33,6 +34,7 @@ public class StudentsDaoImpl extends HibernateDaoSupport implements StudentsDao{
 	}
 
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public int findCount() {
 		String hql = "Select Count(*) from Students";
@@ -44,6 +46,7 @@ public class StudentsDaoImpl extends HibernateDaoSupport implements StudentsDao{
 		return 0;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Students> findByPage(int begin, int pageSize) {
 		DetachedCriteria criteria = DetachedCriteria.forClass(Students.class);

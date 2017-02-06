@@ -16,6 +16,7 @@ import com.classmates.ssh.domain.ClassRoom;
 
 public class ClassRoomDaoImpl extends HibernateDaoSupport implements ClassRoomDao {
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public int findCount() {
 		String hql = "Select count(*)from ClassRoom";
@@ -27,6 +28,7 @@ public class ClassRoomDaoImpl extends HibernateDaoSupport implements ClassRoomDa
 		return 0;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<ClassRoom> findByPage(int begin, int pageSize) {
 		DetachedCriteria criteria = DetachedCriteria.forClass(ClassRoom.class);
@@ -61,6 +63,7 @@ public class ClassRoomDaoImpl extends HibernateDaoSupport implements ClassRoomDa
 	
 
 	//Dao中查询所有专业班级的方法
+	@SuppressWarnings("unchecked")
 	public List<ClassRoom> findAll() {
 		return (List<ClassRoom>) this.getHibernateTemplate().find("from ClassRoom");
 	}

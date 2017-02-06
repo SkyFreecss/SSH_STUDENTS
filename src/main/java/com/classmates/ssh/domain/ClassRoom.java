@@ -20,6 +20,7 @@ import org.hibernate.annotations.GenericGenerator;
  * @author SkyFreecss
  *
  */
+@SuppressWarnings("unused")
 @Entity
 @Table(name="classroom",schema="ssh")
 public class ClassRoom {
